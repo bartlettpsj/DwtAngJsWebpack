@@ -20,7 +20,7 @@ The key code is in code.js.  In there I create the references to dwt and dbr, an
 Issues with installation
 ------------------------
 
-The issue is that Webtwain does not play well with Webpack.  In particular dwt does not work properly, but dbr seems to work better and perhaps dwt just needs making the same as dbr -- although I'm not sure what will happen installing both as the only thing I think is different between dwt and dbr is the extraction of the zip files that contains the important functionality.
+The issue is that Webtwain does not play well with Webpack and there is a problem with the code in the dwt npm package.  In particular dwt does not work properly, but dbr seems to work better and perhaps dwt just needs making the same as dbr -- although I'm not sure what will happen installing both as the only thing I think is different between dwt and dbr is the extraction of the zip files that contains the important functionality.
 
 When you access the site the installers inside dwt and dbr will run on runnign the load or accessing the various objects.  The dwt will get an error:
 
@@ -33,4 +33,9 @@ We do not always use dbr, so we cannot depend on dbr always being present and ne
 
 Note I can bypass the type error by changing the reference of OnWebTwainNotFoundOnWindowsCallback to G.OnWebTwainNotFoundOnWindowsCallback in the minified file and this runs the dynamsoft.webtwain.install.js callback, although it doesn't get far because of webpacked variables (no globals again).
 
-I think the solution will be to make WinDWT work and install the same as WinDBR, and in fact they should play well together when both are used.
+I think the solution will be to make DWT work and install the same way as WinDBR, and in fact they should play well together when both are used.
+
+Hacky Workaround
+----------------
+
+I noticed that the dbr install actually installs correctly so if I let the dbr install and then only access the dwt objects after the  dbrEnv.init success callback.  Then when the WinDWT code accesses objects it does not go to the installer and instead just downloads and extracts the WinDwt.zip silently.  This is only practical for a small example, and is impractical in our complex app with Angular services and multiple platforms.
