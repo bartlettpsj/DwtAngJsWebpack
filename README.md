@@ -39,3 +39,8 @@ Hacky Workaround
 ----------------
 
 I noticed that the DBR install actually installs correctly so if I let the DBR install and then only access the DWT objects after the  dbrEnv.init success callback.  Then when the DWT code accesses objects it does not go to the installer and instead just downloads and extracts the WinDwt.zip silently.  This is only practical for a small example, and is impractical in our complex app with Angular services and multiple platforms.
+
+Note
+----
+
+Our real application contains Angular 1.x, but this sample project is not using Angular as the issue is unrelated to Angular.
