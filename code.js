@@ -7,7 +7,7 @@ const dwt = require('exports?Dynamsoft&EnumDWT_PixelType&EnumDWT_BorderStyle&Enu
 var Dynamsoft = dwt.Dynamsoft;
 console.log('Using Windows license - WebPack Version', dwt);
 
-Dynamsoft.WebTwainEnv.ProductKey = 'f0068NQAAAHyXpWtN2w3efU3yzeztfKjyTKGgVzH2+qlGxuJ85jP21VXJIP0NRLox9ELZUNc/VA+jzAupkSMA+EnH9dq/H3o=';
+Dynamsoft.WebTwainEnv.ProductKey = 'insert license here';
 Dynamsoft.WebTwainEnv.Trial = false;
 
 // Resources are webpack copied from myresources to /Resources which simulates our npm package
@@ -17,7 +17,7 @@ Dynamsoft.WebTwainEnv.ResourcesPath = "/Resources";
 const dbr = require('exports?dynamsoft&dynamsoft.dbrEnv!dbrjs/dist/dynamsoft.barcode.min');
 
 // This is the windows product key - no other browsers yet supported (but promised)
-dbr.dynamsoft.dbrEnv.productKey = 'f0068NQAAAD1sVPYujjppZYV/OosOhzeleTmRAnVLAAPARtoW5ACw3cC2u4dOG7RIndJalj9D/kAQ/sVH5eU+w5cqGnXMl9E='; // v5.x (x)
+dbr.dynamsoft.dbrEnv.productKey = 'insert license here'; // v5.x (x)
 dbr.dynamsoft.dbrEnv.resourcesPath = "/Resources";
 
 // Access the barcode object to force install
