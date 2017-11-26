@@ -1,0 +1,32 @@
+{
+  "name": "dwtangjswebpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "sh ./dev.sh",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ws": "http-server -p 4000"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dwt": "^13.2.0",
+    "dbrjs": "^5.2.0",
+    "exports-loader": "^0.6.4",
+    "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.22.0",
+    "http-server": "^0.10.0",
+    "webpack": "^1.12.14",
+    "webpack-combine-loaders": "^2.0.3",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "peerDependencies": {
+    "html-webpack-plugin": "^2.22.0",
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^4.2.3"
+  }
+}

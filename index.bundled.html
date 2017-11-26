@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Use Dynamic Web TWAIN to Scan - WebPack</title>
+</head>
+<body>
+<div>
+    <select size="1" id="source" style="position: relative; width: 220px;"></select>
+    <input type="button" value="Scan" onclick="EntryPoint.acquireImage();"/>
+</div>
+<div>
+    Load Image:
+    <button onclick="EntryPoint.showLoadDialog();">Load Image</button>
+    Upload Image:
+    <button onclick="EntryPoint.uploadImage();">Upload Image</button>
+</div>
+
+<div>
+    <button onclick="EntryPoint.loadWebTwain();">Load WebTwain</button>
+    <button onclick="EntryPoint.unloadWebTwain();">Unload WebTwain</button>
+</div>
+
+<!-- dwtcontrolContainer is the default div id for Dynamic Web TWAIN control.
+If you need to rename the id, you should also change the id in the dynamsoft.webtwain.config.js accordingly. -->
+<div id="dwtcontrolContainer"></div>
+
+</body>
+</html>
