@@ -2,9 +2,8 @@
  * This is using WebPack based code
  */
 
-const dwt = require('exports?Dynamsoft&EnumDWT_PixelType&EnumDWT_BorderStyle&EnumDWT_MessageType&EnumDWT_Cap&EnumDWT_CapType&EnumDWT_TransferMode&EnumDWT_FileFormat&EnumDWT_TIFFCompressionType&EnumDWT_InterpolationMethod&EnumDWT_ImageType&EnumDWT_PDFCompressionType&EnumDWT_ShowMode&EnumDWT_CapValueType&EnumDWT_UnitType&EnumDWT_DUPLEX&EnumDWT_CapLanguage&EnumDWT_CapSupportedSizes&EnumDWT_CapFeederAlignment&EnumDWT_CapFeederOrder&EnumDWT_CapPrinter&EnumDWT_CapPrinterMode&EnumDWT_CapBitdepthReduction&EnumDWT_CapBitOrder&EnumDWT_CapFilterType&EnumDWT_CapFlash&EnumDWT_CapFlipRotation&EnumDWT_CapImageFilter&EnumDWT_CapLightPath&EnumDWT_CapLightSource&EnumDWT_MagType&EnumDWT_CapNoiseFilter&EnumDWT_CapORientation&EnumDWT_CapOverscan&EnumDWT_CapPixelFlavor&EnumDWT_CapPlanarChunky&EnumDWT_DataSourceStatus&EnumDWT_FitWindowType&EnumDWT_UploadDataFormat&EnumDWT_MouseShape!dwt/dist/dynamsoft.webtwain.min');
-
-var Dynamsoft = dwt.Dynamsoft;
+const dwt = require('exports?Dynamsoft&EnumDWT_PlatformType&EnumDWT_PixelType&EnumDWT_BorderStyle&EnumDWT_MessageType&EnumDWT_Cap&EnumDWT_CapType&EnumDWT_TransferMode&EnumDWT_FileFormat&EnumDWT_TIFFCompressionType&EnumDWT_InterpolationMethod&EnumDWT_ImageType&EnumDWT_PDFCompressionType&EnumDWT_ShowMode&EnumDWT_CapValueType&EnumDWT_UnitType&EnumDWT_DUPLEX&EnumDWT_CapLanguage&EnumDWT_CapSupportedSizes&EnumDWT_CapFeederAlignment&EnumDWT_CapFeederOrder&EnumDWT_CapPrinter&EnumDWT_CapPrinterMode&EnumDWT_CapBitdepthReduction&EnumDWT_CapBitOrder&EnumDWT_CapFilterType&EnumDWT_CapFlash&EnumDWT_CapFlipRotation&EnumDWT_CapImageFilter&EnumDWT_CapLightPath&EnumDWT_CapLightSource&EnumDWT_MagType&EnumDWT_CapNoiseFilter&EnumDWT_CapORientation&EnumDWT_CapOverscan&EnumDWT_CapPixelFlavor&EnumDWT_CapPlanarChunky&EnumDWT_DataSourceStatus&EnumDWT_FitWindowType&EnumDWT_UploadDataFormat&EnumDWT_MouseShape!dwt/dist/dynamsoft.webtwain.min');
+const Dynamsoft = dwt.Dynamsoft;
 console.log('Using Windows license - WebPack Version', dwt);
 
 Dynamsoft.WebTwainEnv.ProductKey = 'insert license here';
@@ -100,4 +99,5 @@ module.exports.acquireImage = AcquireImage;
 module.exports.unloadWebTwain = unloadWebTwain;
 module.exports.loadWebTwain = loadWebTwain;
 module.exports.uploadImage = uploadImage;
-
+module.exports.dwt = dwt;
+module.exports.Dynamsoft = Dynamsoft;

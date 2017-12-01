@@ -1,10 +1,12 @@
 
+const dwt = EntryPoint.dwt;
+const Dynamsoft = EntryPoint.Dynamsoft;
+const EnumDWT_PlatformType = dwt.EnumDWT_PlatformType;
+
 function OnWebTwainNotFoundOnWindowsCallback(ProductName, InstallerUrl, bHTML5, bIE, bSafari, bSSL, strIEVersion) {
 	var objUrl={'default':InstallerUrl};
 
-	alert('Definitely not installed and variables are within webpack context');
-
-	//_show_install_dialog(ProductName, objUrl, bHTML5, EnumDWT_PlatformType.enumWindow, bIE, bSafari, bSSL, strIEVersion);
+  _show_install_dialog(ProductName, objUrl, bHTML5, EnumDWT_PlatformType.enumWindow, bIE, bSafari, bSSL, strIEVersion);
 }
 
 function OnWebTwainNotFoundOnLinuxCallback(ProductName, strDebUrl, strRpmUrl, bHTML5, bIE, bSafari, bSSL, strIEVersion) {
@@ -84,7 +86,7 @@ function _show_install_dialog(ProductName, objInstallerUrl, bHTML5, iPlatform, b
 			    ObjString.push('</div>');
 			}
 			
-			if (iPlatform == EnumDWT_PlatformType.enumLinux 
+			if (iPlatform == EnumDWT_PlatformType.enumLinux
 				|| navigator.userAgent.toLowerCase().indexOf("firefox") > -1) 
 			{
 			    ObjString.push('<div class="dynamsoft-dwt-red" style="padding-top: 10px;">After installation, please RESTART your browser.</div>');
