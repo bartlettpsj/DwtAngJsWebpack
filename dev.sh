@@ -1,4 +1,4 @@
-npm staret#!/usr/bin/env bash
+#!/usr/bin/env bash
 DEV_SERVER_PROTOCOL="${DEV_SERVER_PROTOCOL:-http}"
 DEV_SERVER_HOST="${DEV_SERVER_HOST:-0.0.0.0}"
 DEV_SERVER_PORT="5000"
@@ -10,7 +10,7 @@ if [ -z $DEV_SERVER_PORT ]; then
 else
   DEV_PORT_ARG="--port $DEV_SERVER_PORT"
 fi
-node node_modules/.bin/webpack-dev-server \
+webpack-dev-server \
   --config webpack.development.js \
   --host "$DEV_SERVER_HOST" \
   $DEV_PORT_ARG \

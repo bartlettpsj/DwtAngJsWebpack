@@ -14,19 +14,19 @@ Dynamsoft.WebTwainEnv.Trial = false;
 Dynamsoft.WebTwainEnv.ResourcesPath = "/Resources";
 
 // Add the barcode library too
-const dbr = require('exports?dynamsoft&dynamsoft.dbrEnv!dbrjs/dist/dynamsoft.barcode.min');
+//const dbr = require('exports?dynamsoft&dynamsoft.dbrEnv!dbrjs/dist/dynamsoft.barcode.min');
 
 // This is the windows product key - no other browsers yet supported (but promised)
-dbr.dynamsoft.dbrEnv.productKey = 'insert license here'; // v5.x (x)
-dbr.dynamsoft.dbrEnv.resourcesPath = "/Resources";
+//dbr.dynamsoft.dbrEnv.productKey = 'insert license here'; // v5.x (x)
+//dbr.dynamsoft.dbrEnv.resourcesPath = "/Resources";
 
 // Access the barcode object to force install
-const dbrObject = new dbr.dynamsoft.dbrEnv.BarcodeReader();
-dbr.dynamsoft.dbrEnv.init( () => { console.log('Init Ok')}, (error) => { console.log(`Init failed: ${error}`); });
+//const dbrObject = new dbr.dynamsoft.dbrEnv.BarcodeReader();
+//dbr.dynamsoft.dbrEnv.init( () => { console.log('Init Ok')}, (error) => { console.log(`Init failed: ${error}`); });
 
 Dynamsoft.WebTwainEnv.AutoLoad = false;
 Dynamsoft.WebTwainEnv.Containers = [{ContainerId:'dwtcontrolContainer',Width:830,Height:350}];
-Dynamsoft.WebTwainEnv.Load();
+//Dynamsoft.WebTwainEnv.Load(); --- commented out as Karen mentioned
 Dynamsoft.WebTwainEnv.RegisterEvent('OnWebTwainReady', Dynamsoft_OnReady);  // Register OnWebTwainReady event. This event fires as soon as Dynamic Web TWAIN is initialized and ready to be used
 
 // From here is not important - as just testing functions for Dynamic Web Twain
