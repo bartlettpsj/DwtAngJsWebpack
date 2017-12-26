@@ -6,7 +6,9 @@
   "scripts": {
     "start": "sh ./dev.sh",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "ws": "http-server -p 4000"
+    "ws": "http-server -p 4000",
+    "build": "sh build.sh"
+
   },
   "author": "",
   "license": "ISC",
